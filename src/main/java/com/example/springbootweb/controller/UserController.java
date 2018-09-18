@@ -22,9 +22,9 @@ import java.util.Map;
  * @date 2018-08-07 14:48
  * @description 用户管理控制器
  */
+@Api(tags = "用户信息", description = "用户模块接口")
 @RestController
 @RequestMapping("/user")
-
 public class UserController {
     @Autowired
     private UserService userService;
@@ -152,9 +152,6 @@ public class UserController {
 
         return result;
     }
-
-
-
 
 
 }
