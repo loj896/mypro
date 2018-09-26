@@ -1,5 +1,6 @@
 package com.example.springbootweb;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -31,7 +32,9 @@ public class Swagger2 {
                 //通过select()函数返回一个ApiSelectorBuilder实例,用来控制哪些接口暴露给Swagger来展现，
                 .select()
                 //指定扫描的包路径来定义指定要建立API的目录
-                .apis(RequestHandlerSelectors.basePackage("com.example.springbootweb.controller"))
+                //.apis(RequestHandlerSelectors.basePackage("com.example.springbootweb.controller"))
+				//制定API注解的类
+				.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 .paths(PathSelectors.any())
                 .build();
     }
