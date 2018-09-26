@@ -71,6 +71,18 @@
             <version>2.2.2</version>
         </dependency>
 
+        <!--Redis插件-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!--监控-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
