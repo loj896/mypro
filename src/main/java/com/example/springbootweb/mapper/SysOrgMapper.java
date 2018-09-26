@@ -1,8 +1,7 @@
 package com.example.springbootweb.mapper;
 
-import com.example.springbootweb.model.Test;
+import com.example.springbootweb.model.SysOrg;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -13,8 +12,8 @@ import java.util.List;
  * @description
  */
 @Mapper
-@Component(value = "testMapper")
-public interface TestMapper {
+@Component(value = "SysOrgMapper")
+public interface SysOrgMapper {
 
-    List<Test> findAll();
+    List<SysOrg> findByParam(SysOrg sysOrg);
 }

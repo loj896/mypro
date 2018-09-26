@@ -24,5 +24,12 @@ public class TestController {
         List<Test> list = testService.findAll();
         return list;
     }
+
+    @RequestMapping("test")
+    public String test(){
+        return "Hello World";
+    }
+
+
 }
 
